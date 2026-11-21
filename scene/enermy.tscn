@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cif5wdfr6o7kk"]
+
+[ext_resource type="Script" uid="uid://cyjohrjsa0aum" path="res://scipt/enermy.gd" id="1_y8tn5"]
+[ext_resource type="Texture2D" uid="uid://6uq3wxwy4r8w" path="res://icon.svg" id="2_rfyg4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu5hb"]
+
+[node name="enermy" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_y8tn5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("2_rfyg4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_xu5hb")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgdyi5retmoqj"]
+
+[ext_resource type="Script" uid="uid://pqf20t7hfw6i" path="res://scipt/sword2.gd" id="1_s42jn"]
+[ext_resource type="PackedScene" uid="uid://dtp1st2ipydxl" path="res://scene/sword2_bullet.tscn" id="2_0ilpg"]
+[ext_resource type="Texture2D" uid="uid://bxkpek47i4c7d" path="res://asset/5_6_2_12_35_6_24_462_851.png" id="3_avns7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guiot"]
+size = Vector2(12, 36)
+
+[node name="sword2" type="Area2D"]
+script = ExtResource("1_s42jn")
+projectile_scene = ExtResource("2_0ilpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_avns7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_guiot")

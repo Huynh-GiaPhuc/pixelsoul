@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbsfcpkxulley"]
+
+[ext_resource type="Script" uid="uid://dcbljwryv2bai" path="res://scipt/swordpivot.gd" id="1_1nsjm"]
+[ext_resource type="PackedScene" uid="uid://dgdyi5retmoqj" path="res://scene/sword2.tscn" id="2_f8nk2"]
+
+[node name="swordpivot" type="Node2D"]
+script = ExtResource("1_1nsjm")
+
+[node name="sword2" parent="." instance=ExtResource("2_f8nk2")]

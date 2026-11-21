@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1gw8iu14l1l3"]
+
+[ext_resource type="Script" uid="uid://b8y6jy5gvw6vg" path="res://scipt/character_body_2d.gd" id="1_qug0s"]
+[ext_resource type="Texture2D" uid="uid://6uq3wxwy4r8w" path="res://icon.svg" id="2_gd05a"]
+[ext_resource type="PackedScene" uid="uid://bbsfcpkxulley" path="res://scene/swordpivot.tscn" id="3_86iwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86iwx"]
+size = Vector2(130, 130)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_qug0s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_gd05a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_86iwx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="swordpivot" parent="." instance=ExtResource("3_86iwx")]
+position = Vector2(0, -120)
+scale = Vector2(3, 3)

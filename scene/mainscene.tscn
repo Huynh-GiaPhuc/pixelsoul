@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://djxli6dqa0bba"]
+
+[ext_resource type="PackedScene" uid="uid://d1gw8iu14l1l3" path="res://scene/character_body_2d.tscn" id="1_siadl"]
+[ext_resource type="PackedScene" uid="uid://cif5wdfr6o7kk" path="res://scene/enermy.tscn" id="2_4ulk4"]
+
+[node name="mainscene" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_siadl")]
+position = Vector2(500, 700)
+scale = Vector2(0.3, 0.3)
+
+[node name="enermy" parent="." instance=ExtResource("2_4ulk4")]
+position = Vector2(500, 300)
